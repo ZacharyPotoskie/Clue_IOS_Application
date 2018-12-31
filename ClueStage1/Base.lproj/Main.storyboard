@@ -1,90 +1,887 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Setup-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="ClueStage1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="827"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ddz-E2-na1">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="778"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AjQ-Sf-9b8">
+                                        <rect key="frame" x="0.0" y="50" width="320" height="712"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sbt-wp-FAQ" userLabel="stackedElements">
+                                                <rect key="frame" x="10" y="0.0" width="300" height="707"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Entry" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZc-gY-EF9">
+                                                        <rect key="frame" x="55" y="0.0" width="190" height="49.5"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="36"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="l1M-Yt-Usv" userLabel="PlayerEntry">
+                                                        <rect key="frame" x="7.5" y="77.5" width="285" height="80"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="625-je-0us" userLabel="player1Entry">
+                                                                <rect key="frame" x="0.0" y="0.0" width="285" height="30"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player One" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmd-BH-PbP" userLabel="player1Label">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="92.5" height="30"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Player Name Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3xy-ze-wyc" userLabel="player1field">
+                                                                        <rect key="frame" x="112.5" y="0.0" width="172.5" height="30"/>
+                                                                        <nil key="textColor"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                    </textField>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FI9-cn-KRo" userLabel="player2Entry">
+                                                                <rect key="frame" x="0.0" y="50" width="285" height="30"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJ4-r7-BwS" userLabel="player2Label">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Player Name Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y8I-Vq-0i9" userLabel="player2field">
+                                                                        <rect key="frame" x="112" y="0.0" width="173" height="30"/>
+                                                                        <nil key="textColor"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                    </textField>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Entry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBq-Xe-SDt">
+                                                        <rect key="frame" x="65" y="185.5" width="170" height="49.5"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="36"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="p3l-N3-ewz" userLabel="cardEntryCheckList">
+                                                        <rect key="frame" x="0.0" y="263" width="300" height="444"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="ub7-fF-qbg" userLabel="leftColumn">
+                                                                <rect key="frame" x="0.0" y="0.0" width="138" height="444"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qrt-ok-i8C">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="97" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <state key="normal" title=" Mustard" image="uncheckedButton">
+                                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="disabled">
+                                                                            <color key="titleColor" red="0.35372596150000002" green="0.35372596150000002" blue="0.35372596150000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="selected" image="checkedButton"/>
+                                                                        <connections>
+                                                                            <action selector="checkBoxTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="1M8-k1-Imc"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E80-pf-9k4" userLabel="Green">
+                                                                        <rect key="frame" x="0.0" y="42" width="78" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <state key="normal" title=" Green" image="uncheckedButton">
+                                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="disabled">
+                                                                            <color key="titleColor" red="0.35372596150000002" green="0.35372596150000002" blue="0.35372596150000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="selected" image="checkedButton"/>
+                                                                        <connections>
+                                                                            <action selector="checkBoxTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="qup-uw-mOa"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zd0-Iq-NLq" userLabel="Scarlet">
+                                                                        <rect key="frame" x="0.0" y="84" width="86" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <state key="normal" title=" Scarlet" image="uncheckedButton">
+                                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="disabled">
+                                                                            <color key="titleColor" red="0.35372596150000002" green="0.35372596150000002" blue="0.35372596150000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="selected" image="checkedButton"/>
+                                                                        <connections>
+                                                                            <action selector="checkBoxTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="jaT-O1-wTl"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90P-h5-jKe">
+                                                                        <rect key="frame" x="0.0" y="126" width="130" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <state key="normal" title=" CandleStick" image="uncheckedButton">
+                                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="disabled">
+                                                                            <color key="titleColor" red="0.35372596150000002" green="0.35372596150000002" blue="0.35372596150000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="selected" image="checkedButton"/>
+                                                                        <connections>
+                                                                            <action selector="checkBoxTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="F2T-jy-FfA"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUs-oA-fKO" userLabel="Revolver">
+                                                                        <rect key="frame" x="0.0" y="168" width="111" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <state key="normal" title=" Lead Pipe" image="uncheckedButton">
+                                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="disabled">
+                                                                            <color key="titleColor" red="0.35372596150000002" green="0.35372596150000002" blue="0.35372596150000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="selected" image="checkedButton"/>
+                                                                        <connections>
+                                                                            <action selector="checkBoxTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="isA-DC-S9E"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2A-pK-CB5" userLabel="Lead Pipe">
+                                                                        <rect key="frame" x="0.0" y="210" width="70" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <state key="normal" title=" Rope" image="uncheckedButton">
+                                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="disabled">
+                                                                            <color key="titleColor" red="0.35372596150000002" green="0.35372596150000002" blue="0.35372596150000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="selected" image="checkedButton"/>
+                                                                        <connections>
+                                                                            <action selector="checkBoxTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="rMG-iz-T6z"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0S3-OJ-ILk" userLabel="Hall">
+                                                                        <rect key="frame" x="0.0" y="252" width="58" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <state key="normal" title=" Hall" image="uncheckedButton">
+                                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="disabled">
+                                                                            <color key="titleColor" red="0.35372596150000002" green="0.35372596150000002" blue="0.35372596150000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="selected" image="checkedButton"/>
+                                                                        <connections>
+                                                                            <action selector="checkBoxTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="mUc-Qp-v9P"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmc-Dw-nVt" userLabel="Dining Room">
+                                                                        <rect key="frame" x="0.0" y="294" width="136" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <state key="normal" title=" Dining Room" image="uncheckedButton">
+                                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="disabled">
+                                                                            <color key="titleColor" red="0.35372596150000002" green="0.35372596150000002" blue="0.35372596150000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="selected" image="checkedButton"/>
+                                                                        <connections>
+                                                                            <action selector="checkBoxTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="a8R-u8-xlw"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHh-Rf-85t" userLabel="Ballroom">
+                                                                        <rect key="frame" x="0.0" y="336" width="101" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <state key="normal" title=" Ballroom" image="uncheckedButton">
+                                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="disabled">
+                                                                            <color key="titleColor" red="0.35372596150000002" green="0.35372596150000002" blue="0.35372596150000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="selected" image="checkedButton"/>
+                                                                        <connections>
+                                                                            <action selector="checkBoxTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="c73-rW-FMZ"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gR-G9-d53" userLabel="Billiard Room">
+                                                                        <rect key="frame" x="0.0" y="378" width="138" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <state key="normal" title=" Billiard Room" image="uncheckedButton">
+                                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="disabled">
+                                                                            <color key="titleColor" red="0.35372596150000002" green="0.35372596150000002" blue="0.35372596150000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="selected" image="checkedButton"/>
+                                                                        <connections>
+                                                                            <action selector="checkBoxTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="3Hj-a7-xwi"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVV-3m-5fC" userLabel="Study">
+                                                                        <rect key="frame" x="0.0" y="420" width="76" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <state key="normal" title=" Study" image="uncheckedButton">
+                                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="disabled">
+                                                                            <color key="titleColor" red="0.35372596150000002" green="0.35372596150000002" blue="0.35372596150000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="selected" image="checkedButton"/>
+                                                                        <connections>
+                                                                            <action selector="checkBoxTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="5ZW-7M-3rl"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="PCM-yT-CJc" userLabel="rightColumn">
+                                                                <rect key="frame" x="158" y="0.0" width="142" height="440.5"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8X-6j-m6U" userLabel="Plum">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="69" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <state key="normal" title=" Plum" image="uncheckedButton">
+                                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="disabled">
+                                                                            <color key="titleColor" red="0.35294117650000001" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="selected" image="checkedButton"/>
+                                                                        <connections>
+                                                                            <action selector="checkBoxTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="SzA-f3-kBu"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xt6-c9-NNe" userLabel="Peacock">
+                                                                        <rect key="frame" x="0.0" y="42" width="99" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <state key="normal" title=" Peacock" image="uncheckedButton">
+                                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="disabled">
+                                                                            <color key="titleColor" red="0.35294117650000001" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="selected" image="checkedButton"/>
+                                                                        <connections>
+                                                                            <action selector="checkBoxTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Gua-VK-YLE"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rs7-jh-E9D" userLabel="White">
+                                                                        <rect key="frame" x="0.0" y="84" width="76" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <state key="normal" title=" White" image="uncheckedButton">
+                                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="disabled">
+                                                                            <color key="titleColor" red="0.35294117650000001" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="selected" image="checkedButton"/>
+                                                                        <connections>
+                                                                            <action selector="checkBoxTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="hoN-wd-2YC"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5Z-q8-KWS" userLabel="Candlestick">
+                                                                        <rect key="frame" x="0.0" y="126" width="70" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <state key="normal" title=" Knife" image="uncheckedButton">
+                                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="disabled">
+                                                                            <color key="titleColor" red="0.35294117650000001" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="selected" image="checkedButton"/>
+                                                                        <connections>
+                                                                            <action selector="checkBoxTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Kld-gP-b3k"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jws-5k-F4g" userLabel="Rope">
+                                                                        <rect key="frame" x="0.0" y="168" width="100" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <state key="normal" title=" Revolver" image="uncheckedButton">
+                                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="disabled">
+                                                                            <color key="titleColor" red="0.35294117650000001" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="selected" image="checkedButton"/>
+                                                                        <connections>
+                                                                            <action selector="checkBoxTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Enk-SC-okR"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ywa-2e-zDZ" userLabel="Wrench">
+                                                                        <rect key="frame" x="0.0" y="210" width="93" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <state key="normal" title=" Wrench" image="uncheckedButton">
+                                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="disabled">
+                                                                            <color key="titleColor" red="0.35294117650000001" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="selected" image="checkedButton"/>
+                                                                        <connections>
+                                                                            <action selector="checkBoxTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="VHY-0Q-G4m"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycf-zS-YXC" userLabel="Lounge">
+                                                                        <rect key="frame" x="0.0" y="252" width="90" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <state key="normal" title=" Lounge" image="uncheckedButton">
+                                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="disabled">
+                                                                            <color key="titleColor" red="0.35294117650000001" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="selected" image="checkedButton"/>
+                                                                        <connections>
+                                                                            <action selector="checkBoxTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Ite-hY-ag7"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6D-fE-VX1" userLabel="Kitchen">
+                                                                        <rect key="frame" x="0.0" y="294" width="91" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <state key="normal" title=" Kitchen" image="uncheckedButton">
+                                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="disabled">
+                                                                            <color key="titleColor" red="0.35294117650000001" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="selected" image="checkedButton"/>
+                                                                        <connections>
+                                                                            <action selector="checkBoxTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="CWd-Hy-xcl"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZo-D5-Yix" userLabel="Conservatory">
+                                                                        <rect key="frame" x="0.0" y="336" width="142" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <state key="normal" title=" Conservatory" image="uncheckedButton">
+                                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="disabled">
+                                                                            <color key="titleColor" red="0.35294117650000001" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="selected" image="checkedButton"/>
+                                                                        <connections>
+                                                                            <action selector="checkBoxTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="aLC-Ix-d5r"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Hi-if-wKR" userLabel="Library">
+                                                                        <rect key="frame" x="0.0" y="378" width="85" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <state key="normal" title=" Library" image="uncheckedButton">
+                                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="disabled">
+                                                                            <color key="titleColor" red="0.35294117650000001" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="selected" image="checkedButton"/>
+                                                                        <connections>
+                                                                            <action selector="checkBoxTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="lYh-EG-j2E"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENj-lM-Btt" userLabel="Empty">
+                                                                        <rect key="frame" x="0.0" y="420" width="49" height="20.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <color key="textColor" red="0.99509803919999995" green="0.99019607840000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Sbt-wp-FAQ" firstAttribute="centerY" secondItem="AjQ-Sf-9b8" secondAttribute="centerY" constant="-2.5" id="B3C-S3-Th3"/>
+                                            <constraint firstItem="Sbt-wp-FAQ" firstAttribute="top" secondItem="AjQ-Sf-9b8" secondAttribute="top" id="LxZ-ru-UaP"/>
+                                            <constraint firstItem="Sbt-wp-FAQ" firstAttribute="top" secondItem="AjQ-Sf-9b8" secondAttribute="top" id="V2q-e7-uJn"/>
+                                            <constraint firstItem="Sbt-wp-FAQ" firstAttribute="centerX" secondItem="AjQ-Sf-9b8" secondAttribute="centerX" id="aHW-EH-vpQ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="AjQ-Sf-9b8" secondAttribute="bottom" constant="2" id="55z-7c-Hg3"/>
+                                    <constraint firstItem="AjQ-Sf-9b8" firstAttribute="top" secondItem="ddz-E2-na1" secondAttribute="top" constant="64" id="6Dg-Ee-qBo"/>
+                                    <constraint firstAttribute="trailing" secondItem="AjQ-Sf-9b8" secondAttribute="trailing" id="C0C-7I-zgA"/>
+                                    <constraint firstItem="AjQ-Sf-9b8" firstAttribute="leading" secondItem="ddz-E2-na1" secondAttribute="leading" id="V71-SC-7fG"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstItem="ddz-E2-na1" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="3Aa-IT-0lc"/>
+                            <constraint firstItem="ddz-E2-na1" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="80M-J5-iyP"/>
+                            <constraint firstAttribute="trailing" secondItem="ddz-E2-na1" secondAttribute="trailing" id="C4E-tm-xFu"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="ddz-E2-na1" secondAttribute="bottom" id="llO-Bg-xa6"/>
+                            <constraint firstItem="AjQ-Sf-9b8" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="nnW-Xu-Tel"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" title="Setup" id="4Lm-oY-26w"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="827"/>
+                    <connections>
+                        <outlet property="player1field" destination="3xy-ze-wyc" id="oi2-8j-tww"/>
+                        <outlet property="player2field" destination="y8I-Vq-0i9" id="mTp-A6-aLr"/>
+                        <outletCollection property="cardCheckbuttonCollection" destination="Qrt-ok-i8C" collectionClass="NSMutableArray" id="aCw-ce-4Mr"/>
+                        <outletCollection property="cardCheckbuttonCollection" destination="E80-pf-9k4" collectionClass="NSMutableArray" id="zfb-yp-Gx0"/>
+                        <outletCollection property="cardCheckbuttonCollection" destination="Zd0-Iq-NLq" collectionClass="NSMutableArray" id="1c5-lm-obY"/>
+                        <outletCollection property="cardCheckbuttonCollection" destination="90P-h5-jKe" collectionClass="NSMutableArray" id="ohL-de-mif"/>
+                        <outletCollection property="cardCheckbuttonCollection" destination="RUs-oA-fKO" collectionClass="NSMutableArray" id="aPy-Oz-L1p"/>
+                        <outletCollection property="cardCheckbuttonCollection" destination="a2A-pK-CB5" collectionClass="NSMutableArray" id="Hg9-KK-ECp"/>
+                        <outletCollection property="cardCheckbuttonCollection" destination="0S3-OJ-ILk" collectionClass="NSMutableArray" id="enS-n6-Ycn"/>
+                        <outletCollection property="cardCheckbuttonCollection" destination="kmc-Dw-nVt" collectionClass="NSMutableArray" id="aOW-Vy-UOy"/>
+                        <outletCollection property="cardCheckbuttonCollection" destination="gHh-Rf-85t" collectionClass="NSMutableArray" id="Ivm-uV-OeI"/>
+                        <outletCollection property="cardCheckbuttonCollection" destination="8gR-G9-d53" collectionClass="NSMutableArray" id="ILD-ah-vof"/>
+                        <outletCollection property="cardCheckbuttonCollection" destination="lVV-3m-5fC" collectionClass="NSMutableArray" id="MED-fr-0xI"/>
+                        <outletCollection property="cardCheckbuttonCollection" destination="i8X-6j-m6U" collectionClass="NSMutableArray" id="NJP-aF-gVC"/>
+                        <outletCollection property="cardCheckbuttonCollection" destination="Xt6-c9-NNe" collectionClass="NSMutableArray" id="sSp-Jb-Ase"/>
+                        <outletCollection property="cardCheckbuttonCollection" destination="rs7-jh-E9D" collectionClass="NSMutableArray" id="azs-UX-jtY"/>
+                        <outletCollection property="cardCheckbuttonCollection" destination="u5Z-q8-KWS" collectionClass="NSMutableArray" id="OHM-Xe-nMu"/>
+                        <outletCollection property="cardCheckbuttonCollection" destination="Jws-5k-F4g" collectionClass="NSMutableArray" id="uZa-dd-foC"/>
+                        <outletCollection property="cardCheckbuttonCollection" destination="Ywa-2e-zDZ" collectionClass="NSMutableArray" id="cgS-7K-WCx"/>
+                        <outletCollection property="cardCheckbuttonCollection" destination="Ycf-zS-YXC" collectionClass="NSMutableArray" id="MGS-92-W9J"/>
+                        <outletCollection property="cardCheckbuttonCollection" destination="I6D-fE-VX1" collectionClass="NSMutableArray" id="xT7-fk-X9B"/>
+                        <outletCollection property="cardCheckbuttonCollection" destination="RZo-D5-Yix" collectionClass="NSMutableArray" id="QK0-Br-CqL"/>
+                        <outletCollection property="cardCheckbuttonCollection" destination="0Hi-if-wKR" collectionClass="NSMutableArray" id="Ffw-GD-UnY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="1530" y="-908.97887323943667"/>
         </scene>
-        <!--Second-->
+        <!--Questions-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Questions" title="Questions" id="8rJ-Kc-sve" customClass="SecondViewController" customModule="ClueStage1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6VS-5X-jsl">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="0.029257550335570471" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="rUz-vZ-cTW">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rUz-vZ-cTW" id="eYS-S9-6v3">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="LjC-9E-yxh"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="px5-Wa-HMc"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstAttribute="trailing" secondItem="6VS-5X-jsl" secondAttribute="trailing" id="Jo2-tv-KCi"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="6VS-5X-jsl" secondAttribute="bottom" id="RIJ-aW-0nA"/>
+                            <constraint firstItem="6VS-5X-jsl" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="bTf-Xv-Rn7"/>
+                            <constraint firstItem="6VS-5X-jsl" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="rwO-dh-UxK"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <navigationItem key="navigationItem" title="Questions" id="xeK-ge-SSJ"/>
+                    <connections>
+                        <outlet property="tableView" destination="6VS-5X-jsl" id="dTA-zP-dHm"/>
+                        <segue destination="9Nu-A6-wrI" kind="show" identifier="addQuestionSegue" id="MbZ-vk-NC6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="1530" y="-29"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Add Question-->
+        <scene sceneID="8SA-Jb-iFq">
+            <objects>
+                <viewController title="Add Question" id="9Nu-A6-wrI" customClass="QuestionAddViewController" customModule="ClueStage1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sy0-Dl-57k"/>
+                        <viewControllerLayoutGuide type="bottom" id="KLo-ml-JfQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OL9-pQ-f80">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIu-pj-pfj" userLabel="Suspect Button">
+                                <rect key="frame" x="124" y="362" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="s-40"/>
+                                <connections>
+                                    <action selector="cardMainButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="YRC-uc-LXD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhA-5B-25h" userLabel="mustardButton">
+                                <rect key="frame" x="202" y="0.0" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97647058823529409" green="0.81568627450980391" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="mustard-40"/>
+                                <connections>
+                                    <action selector="cardPickerButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="KI7-fq-9kX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIm-uW-QuC" userLabel="plumButton">
+                                <rect key="frame" x="240" y="15" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8784313725490196" green="0.4392156862745098" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="plum-40"/>
+                                <connections>
+                                    <action selector="cardPickerButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="17D-8F-3Am"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u05-92-JPV" userLabel="greenButton">
+                                <rect key="frame" x="250" y="25" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.83137254901960778" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="green-40"/>
+                                <connections>
+                                    <action selector="cardPickerButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="dvI-Fd-XRj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGg-OU-BEw" userLabel="peacockButton">
+                                <rect key="frame" x="260" y="35" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.38431372549019605" green="0.38096788194444442" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.38431372549019605" green="0.38096788194444442" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="peacock-40"/>
+                                <connections>
+                                    <action selector="cardPickerButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="lXZ-ao-Nda"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2r-3e-3rY" userLabel="scarletButton">
+                                <rect key="frame" x="265" y="127" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="scarlet-40"/>
+                                <connections>
+                                    <action selector="cardPickerButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="s7N-sk-GSu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uT7-X6-iep">
+                                <rect key="frame" x="16" y="6" width="40" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="60"/>
+                                <state key="normal" image="w-40">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cardMainButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="vdI-9Q-i3Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1L-jV-B4p" userLabel="candlestickButton">
+                                <rect key="frame" x="16" y="20" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="candlestick-40"/>
+                                <connections>
+                                    <action selector="cardPickerButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="g3N-iM-Aed"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5X-ji-Xnj" userLabel="knifeButton">
+                                <rect key="frame" x="16" y="20" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="knife-40"/>
+                                <connections>
+                                    <action selector="cardPickerButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="8Bk-5b-rFx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mQ-qp-l0S" userLabel="leadpipeButton">
+                                <rect key="frame" x="16" y="20" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="leadpipe-40"/>
+                                <connections>
+                                    <action selector="cardPickerButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="kQV-HY-HXM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCC-7b-m2L" userLabel="revolverButton">
+                                <rect key="frame" x="16" y="20" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="gun-40"/>
+                                <connections>
+                                    <action selector="cardPickerButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="vQL-vq-HHS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rse-S2-h0c" userLabel="ropeButton">
+                                <rect key="frame" x="16" y="20" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="rope-40"/>
+                                <connections>
+                                    <action selector="cardPickerButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="URR-Sn-3sd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UF9-vT-gTV" userLabel="wrenchButton">
+                                <rect key="frame" x="16" y="20" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="wrench-40"/>
+                                <connections>
+                                    <action selector="cardPickerButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="q4G-Cx-hJR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzG-bw-wWR" userLabel="RoomButton">
+                                <rect key="frame" x="25" y="458" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="r-40"/>
+                                <connections>
+                                    <action selector="cardMainButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="dr8-hX-QT3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6k-5p-ntU" userLabel="hallButton">
+                                <rect key="frame" x="112" y="438" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="hall-40"/>
+                                <connections>
+                                    <action selector="cardPickerButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="3FL-aD-Iy2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i84-5m-6ZV" userLabel="loungeButton">
+                                <rect key="frame" x="145" y="430" width="94" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="lounge-40"/>
+                                <connections>
+                                    <action selector="cardPickerButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="gN1-vR-0wa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPD-Wn-T6V" userLabel="diningroomButton">
+                                <rect key="frame" x="132" y="458" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="diningroom-40"/>
+                                <connections>
+                                    <action selector="cardPickerButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="pYS-R9-CC9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="blj-sC-90S" userLabel="kitchenButton">
+                                <rect key="frame" x="142" y="468" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="kitchen-40"/>
+                                <connections>
+                                    <action selector="cardPickerButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="Ywv-6v-Wab"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWU-kb-XZr" userLabel="ballroomButton">
+                                <rect key="frame" x="152" y="478" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ballroom-40"/>
+                                <connections>
+                                    <action selector="cardPickerButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="b1u-Hw-Kzr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="17" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOG-OY-nZ6" userLabel="conservatoryButton">
+                                <rect key="frame" x="162" y="488" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="conservatory-40"/>
+                                <connections>
+                                    <action selector="cardPickerButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="ErB-xS-7hR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="18" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lK-aE-1a1" userLabel="billiardroomButton">
+                                <rect key="frame" x="145" y="498" width="94" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="billiardroom-40"/>
+                                <connections>
+                                    <action selector="cardPickerButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="BLS-jx-nGY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="19" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0j4-l6-vlg" userLabel="libraryButton">
+                                <rect key="frame" x="182" y="508" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="library-40"/>
+                                <connections>
+                                    <action selector="cardPickerButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="rgg-Uo-92e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="20" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrA-Ga-88U" userLabel="studyButton">
+                                <rect key="frame" x="192" y="518" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="study-40"/>
+                                <connections>
+                                    <action selector="cardPickerButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="niA-DX-b63"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egJ-eB-eLu" userLabel="askerButton">
+                                <rect key="frame" x="96" y="378" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Asker">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="askertellerButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="2Y6-pO-7Ej"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNL-8F-KbN" userLabel="tellerButton">
+                                <rect key="frame" x="96" y="420" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Teller">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="askertellerButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="WIq-P8-kT3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1X-VZ-lMD" userLabel="primaryresponseButton">
+                                <rect key="frame" x="115" y="352" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="R-1">
+                                    <color key="titleColor" red="0.99607843137254903" green="0.9882352941176471" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="responseButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="vMB-7W-qXc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUa-Vr-NoU" userLabel="secondaryresponseButton">
+                                <rect key="frame" x="204" y="367" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="R-2">
+                                    <color key="titleColor" red="0.99607843137254903" green="0.9882352941176471" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="responseButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="I8m-na-vVr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wi2-Qj-D6I" userLabel="whiteButton">
+                                <rect key="frame" x="193" y="127" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.60091801243333332" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="white-40"/>
+                                <connections>
+                                    <action selector="cardPickerButtonTapped:" destination="9Nu-A6-wrI" eventType="touchUpInside" id="1ax-91-rav"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="roomButton" destination="UzG-bw-wWR" id="dvk-tD-FOT"/>
+                        <outlet property="suspectButton" destination="zIu-pj-pfj" id="w04-lj-BFc"/>
+                        <outlet property="weaponButton" destination="uT7-X6-iep" id="fU1-CR-0KR"/>
+                        <outletCollection property="weaponPickerButtonList" destination="l1L-jV-B4p" collectionClass="NSMutableArray" id="7zN-kF-DP1"/>
+                        <outletCollection property="weaponPickerButtonList" destination="tCC-7b-m2L" collectionClass="NSMutableArray" id="AJ3-ZG-CTP"/>
+                        <outletCollection property="weaponPickerButtonList" destination="w5X-ji-Xnj" collectionClass="NSMutableArray" id="Aq6-ca-B9D"/>
+                        <outletCollection property="weaponPickerButtonList" destination="UF9-vT-gTV" collectionClass="NSMutableArray" id="0tT-jn-B4z"/>
+                        <outletCollection property="weaponPickerButtonList" destination="3mQ-qp-l0S" collectionClass="NSMutableArray" id="iQt-8y-b1G"/>
+                        <outletCollection property="weaponPickerButtonList" destination="rse-S2-h0c" collectionClass="NSMutableArray" id="sqk-de-Ecc"/>
+                        <outletCollection property="suspectPickerButtonList" destination="NhA-5B-25h" collectionClass="NSMutableArray" id="mX9-de-m2m"/>
+                        <outletCollection property="suspectPickerButtonList" destination="GIm-uW-QuC" collectionClass="NSMutableArray" id="qCn-cz-sLI"/>
+                        <outletCollection property="suspectPickerButtonList" destination="u05-92-JPV" collectionClass="NSMutableArray" id="IYF-1D-vB1"/>
+                        <outletCollection property="suspectPickerButtonList" destination="JGg-OU-BEw" collectionClass="NSMutableArray" id="UzL-lG-seM"/>
+                        <outletCollection property="suspectPickerButtonList" destination="e2r-3e-3rY" collectionClass="NSMutableArray" id="rQo-Aa-IhT"/>
+                        <outletCollection property="suspectPickerButtonList" destination="Wi2-Qj-D6I" collectionClass="NSMutableArray" id="e98-Bv-7Zt"/>
+                        <outletCollection property="roomPickerButtonList" destination="X6k-5p-ntU" collectionClass="NSMutableArray" id="Cwc-F1-ShC"/>
+                        <outletCollection property="roomPickerButtonList" destination="i84-5m-6ZV" collectionClass="NSMutableArray" id="Ku4-YN-Wq0"/>
+                        <outletCollection property="roomPickerButtonList" destination="nPD-Wn-T6V" collectionClass="NSMutableArray" id="RQu-Ae-bBS"/>
+                        <outletCollection property="roomPickerButtonList" destination="blj-sC-90S" collectionClass="NSMutableArray" id="LsD-hs-CJ2"/>
+                        <outletCollection property="roomPickerButtonList" destination="tWU-kb-XZr" collectionClass="NSMutableArray" id="nTT-ZO-fkV"/>
+                        <outletCollection property="roomPickerButtonList" destination="wOG-OY-nZ6" collectionClass="NSMutableArray" id="p10-8V-urY"/>
+                        <outletCollection property="roomPickerButtonList" destination="3lK-aE-1a1" collectionClass="NSMutableArray" id="cBd-yn-Xpi"/>
+                        <outletCollection property="roomPickerButtonList" destination="0j4-l6-vlg" collectionClass="NSMutableArray" id="HUO-3f-T6m"/>
+                        <outletCollection property="roomPickerButtonList" destination="rrA-Ga-88U" collectionClass="NSMutableArray" id="snT-ax-EbJ"/>
+                        <outletCollection property="askertellerButtonList" destination="egJ-eB-eLu" collectionClass="NSMutableArray" id="9ym-LN-dSt"/>
+                        <outletCollection property="askertellerButtonList" destination="yNL-8F-KbN" collectionClass="NSMutableArray" id="d2B-lq-yaB"/>
+                        <outletCollection property="responseButtonList" destination="S1X-VZ-lMD" collectionClass="NSMutableArray" id="SjJ-1y-vG8"/>
+                        <outletCollection property="responseButtonList" destination="aUa-Vr-NoU" collectionClass="NSMutableArray" id="ZAe-fR-WOK"/>
+                        <segue destination="8rJ-Kc-sve" kind="show" identifier="submitQuestionSegue" id="GS2-9c-YsO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HnR-cT-MLa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2465.625" y="-30.633802816901408"/>
+        </scene>
+        <!--Data-->
+        <scene sceneID="mri-yL-7ss">
+            <objects>
+                <viewController title="Item" id="712-lF-PKe" userLabel="Data" customClass="ThirdViewControllViewController" customModule="ClueStage1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fi3-zQ-byB"/>
+                        <viewControllerLayoutGuide type="bottom" id="6EN-iH-Tyl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="atO-p2-JEI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iWO-bm-z9v">
+                                <rect key="frame" x="16" y="64" width="288" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dyN-tY-PzU">
+                                    <size key="itemSize" width="30" height="28"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="ftJ-KW-Ac2" customClass="CustomCollectionViewCell" customModule="ClueStage1" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="30" height="28"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hh8-OL-fhq">
+                                                    <rect key="frame" x="10" y="14" width="10" height="0.0"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="1" green="0.03265415386" blue="0.21632763899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="hh8-OL-fhq" firstAttribute="centerY" secondItem="ftJ-KW-Ac2" secondAttribute="centerY" id="4ox-qq-89q"/>
+                                            <constraint firstItem="hh8-OL-fhq" firstAttribute="leading" secondItem="ftJ-KW-Ac2" secondAttribute="leadingMargin" id="QXA-4P-TmI"/>
+                                            <constraint firstItem="hh8-OL-fhq" firstAttribute="centerX" secondItem="ftJ-KW-Ac2" secondAttribute="centerX" id="RJ7-lU-aOf"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="10" left="10" bottom="9" right="9"/>
+                                        <connections>
+                                            <outlet property="myLabel" destination="hh8-OL-fhq" id="PrQ-g8-9N2"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="712-lF-PKe" id="fMI-Ba-TrP"/>
+                                    <outlet property="delegate" destination="712-lF-PKe" id="sOj-QL-hlH"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iWO-bm-z9v" firstAttribute="leading" secondItem="atO-p2-JEI" secondAttribute="leadingMargin" id="4PG-6s-son"/>
+                            <constraint firstItem="6EN-iH-Tyl" firstAttribute="top" secondItem="iWO-bm-z9v" secondAttribute="bottom" constant="-49" id="9fi-Ji-jbJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iWO-bm-z9v" secondAttribute="trailing" id="KPE-cf-8NY"/>
+                            <constraint firstItem="iWO-bm-z9v" firstAttribute="top" secondItem="Fi3-zQ-byB" secondAttribute="bottom" id="Np8-XJ-MwR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Data" id="6Ko-Dd-WKi"/>
+                    <connections>
+                        <outlet property="dataCollectionView" destination="iWO-bm-z9v" id="0pS-j8-eR7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7up-Va-pDE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1530" y="738.38028169014081"/>
+        </scene>
+        <!--Base View Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" customClass="baseViewController" customModule="ClueStage1" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -92,17 +889,106 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="oVn-ez-ETJ" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="4UL-wq-zxb" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="Acc-hY-cue" kind="relationship" relationship="viewControllers" id="dX4-KD-Y83"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-643" y="51"/>
+        </scene>
+        <!--Questions Nav Control-->
+        <scene sceneID="eon-1h-5qJ">
+            <objects>
+                <navigationController title="Questions Nav Control" automaticallyAdjustsScrollViewInsets="NO" id="4UL-wq-zxb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Questions" image="question-25" selectedImage="question-25" id="cPa-gy-q4n"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PxF-jb-9rr">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="M14-WL-2SG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DCp-KL-lmd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="388" y="-117"/>
+        </scene>
+        <!--Setup Nav Control-->
+        <scene sceneID="tRb-lT-mOW">
+            <objects>
+                <navigationController title="Setup Nav Control" automaticallyAdjustsScrollViewInsets="NO" id="oVn-ez-ETJ" colorLabel="IBBuiltInLabel-Red" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Setup" image="settings-25" selectedImage="settings-25" id="acW-dT-cKf" colorLabel="IBBuiltInLabel-Blue"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JKm-TX-BsU">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="i8K-J2-veT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UYJ-cA-Ijy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="388" y="-789"/>
+        </scene>
+        <!--Item Nav Control-->
+        <scene sceneID="QKT-ub-raY">
+            <objects>
+                <navigationController title="Item Nav Control" automaticallyAdjustsScrollViewInsets="NO" id="Acc-hY-cue" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Data" image="data-25" selectedImage="data-25" id="eYF-ce-Oc8"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DwT-gG-UF3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="712-lF-PKe" kind="relationship" relationship="rootViewController" id="FSm-pj-igZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rco-ND-8fx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="388" y="556"/>
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="ballroom-40" width="40" height="40"/>
+        <image name="billiardroom-40" width="40" height="40"/>
+        <image name="candlestick-40" width="40" height="40"/>
+        <image name="checkedButton" width="20" height="20"/>
+        <image name="conservatory-40" width="40" height="40"/>
+        <image name="data-25" width="25" height="25"/>
+        <image name="diningroom-40" width="40" height="40"/>
+        <image name="green-40" width="40" height="40"/>
+        <image name="gun-40" width="40" height="40"/>
+        <image name="hall-40" width="40" height="40"/>
+        <image name="kitchen-40" width="40" height="40"/>
+        <image name="knife-40" width="40" height="40"/>
+        <image name="leadpipe-40" width="40" height="40"/>
+        <image name="library-40" width="40" height="40"/>
+        <image name="lounge-40" width="40" height="40"/>
+        <image name="mustard-40" width="40" height="40"/>
+        <image name="peacock-40" width="40" height="40"/>
+        <image name="plum-40" width="40" height="40"/>
+        <image name="question-25" width="25" height="25"/>
+        <image name="r-40" width="40" height="40"/>
+        <image name="rope-40" width="40" height="40"/>
+        <image name="s-40" width="40" height="40"/>
+        <image name="scarlet-40" width="40" height="40"/>
+        <image name="settings-25" width="25" height="25"/>
+        <image name="study-40" width="40" height="40"/>
+        <image name="uncheckedButton" width="20" height="20"/>
+        <image name="w-40" width="40" height="40"/>
+        <image name="white-40" width="40" height="40"/>
+        <image name="wrench-40" width="40" height="40"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="GS2-9c-YsO"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.14117647058823529" green="0.32549019607843138" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
 </document>

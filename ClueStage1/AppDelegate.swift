@@ -12,11 +12,21 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        //customize colors and font of navigation bars (global changes)
+        UINavigationBar.appearance().barTintColor = UIColor(red: 72.0/255.0, green: 172.0/255.0, blue: 247.0/255.0, alpha: 1.0)
+        UINavigationBar.appearance().tintColor = UIColor.white
+        let color = UIColor.white
+        let font = UIFont(name: "GillSans", size: 20)
+        let attributes: [String: AnyObject] = [
+            convertFromNSAttributedStringKey(NSAttributedString.Key.font): font!,
+            convertFromNSAttributedStringKey(NSAttributedString.Key.foregroundColor): color]
+        
+        UINavigationBar.appearance().titleTextAttributes = convertToOptionalNSAttributedStringKeyDictionary(attributes)
         return true
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -44,3 +54,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
+}
